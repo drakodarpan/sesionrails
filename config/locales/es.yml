@@ -1,0 +1,63 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+es:
+  welcome: "Bienvenido"
+  language: "Selecciona tu idioma"
+  title_nav:
+    home: "Inicio"
+    sign_in: "Ingresar"
+    sign_out: "Salir"
+    edit_account: "Editar cuenta"
+    sign_up: "Registrarse"
+    users: "Usuarios"
+  title_label:
+    create: "Crear"
+    edit: "Editar"
+  label_forms:
+    remember_me: "Recordarme"
+    forgot_you_pass: "¿Olvidaste tu password?"
+    name: "Nombre"
+    first_name: "Apellido paterno"
+    last_name: "Apellido materno"
+    password_confirmation: "Confirmar password"
+    current_password: "Password actual"
+    cancel_my_account: "Cancelar mi cuenta"
+    sad_message: "¿No estás feliz? Estaremos tristes de que te vayas."
+  pass_label:
+    lblminchar: "caracteres minimo"
+    lblpasblank: "dejar en blanco, sino se desea cambiar"
+    lblpasnow: "se ocupa tu password actual para hacer la actualización"
+    lblpasconfirmation: "Confirma tu password"
+  lbl_boton:
+    sign_in: "Ingresar"
+    update: "Actualizar"
+    cancel: "Cancelar"
+    back: "Atras"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: ": No puede quedar vacio!!!"
+            password:
+              blank: ": No puede quedar vacio!!!"

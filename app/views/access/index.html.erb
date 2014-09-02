@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="small-5 center-block no-float">
+    <h2><%= t('language') %></h2>
+  </div>
+  <div class="small-5 no-float img_position">
+    <%= link_to(image_tag('united_states.png'), :locale => :en ) %>
+  </div>
+  <div class="small-5 no-float img_position">
+    <%= link_to(image_tag('mexico.png'), :locale => :es) %>
+  </div>
+</div>
+
+<footer>
+  <hr />
+  <div class="footer-left" >Default language is: <strong>English</strong></div>
+</footer>
