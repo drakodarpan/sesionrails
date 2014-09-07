@@ -4,13 +4,13 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = '324d84a26a47e3e8a7c658f206cbb7d5075ff47343add6fc517dcd67ec0af4e10c9ab6f35e9db6f85aee56d166e56babba3814af8320b58360a6dccf1d221a89'
+  # config.secret_key = 'a416016dea0dd7e14964f10ffac848db0ee1285d9c7c7efbdbdb5ab69d2ec767bfb958d0049bf8958f9740c059a5a1aee7ca988d340f005dd3e042e1f95d188b'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'no-reply@' + Rails.application.secrets.domain_name
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -30,6 +30,7 @@ Devise.setup do |config|
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
   # config.authentication_keys = [ :email ]
+  config.authentication_keys = [:account_number]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -97,7 +98,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '57e34f1cca5e3e873acaea6a712f8ac38d5b373e64229a0533a2a207a8157344d911ea7450d7f60484f5face3ea846a68e57e8e310892e5c6d0395dbab8bdbce'
+  # config.pepper = '8489bc904a44082303740ffbda8a14153b268aafcf45ae68dafa090c6c2a1057e6498d9db77f7b0adc0db07759b771ddc234a3b6de3eaea111cd6cb039a9c153'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without

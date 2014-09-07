@@ -20,35 +20,4 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  welcome: "Welcome"
-  language: "Select your language"
-  title_nav:
-    home: "Home"
-    sign_in: "Sign in"
-    sign_out: "Sign out"
-    edit_account: "Edit account"
-    registration: "Registration"
-    users: "User"
-  title_label:
-    create: "Create"
-    edit: "Edit"
-  label_forms:
-    remember_me: "Remember me"
-    forgot_you_pass: "Forgot your password?"
-    name: "Name"
-    first_name: "First name"
-    last_name: "Last name"
-    password_confirmation: "Password confirmation"
-    current_password: "Current Password"
-    cancel_my_account: "Cancel my account"
-    sad_message: "Unhappy? We'll be sad to see you go."
-  pass_label:
-    lblminchar: "characters minimum"
-    lblpasblank: "leave blank if you don't want to change it"
-    lblpasnow: "we need your current password to confirm your changes"
-    lblpasconfirmation: "Password confirmation"
-  lbl_boton:
-    sign_in: "Sing in"
-    update: "Update"
-    cancel: "Cancel"
-    back: "Back"
+  hello: "Hello world"

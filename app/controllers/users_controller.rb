@@ -1,20 +1,14 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user!
+  
   def index
+    @users = User.all
   end
 
   def show
-  end
-  
-  def new
-    @user = User.current_user
-  end
-  
-  def create
-    @user = User.create(user_params)
-  end
-  
-  private
-    def user_params
-      param.require(:user).permit(:avatar)
+    @user = User.find(params[:id])
+    unless @user == current_user
+      redirect_to :back, :alert => 'Access denied.'
     end
+  end
 end

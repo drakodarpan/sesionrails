@@ -1,3 +1,5 @@
-<%= image_tag @user.avatar.url %>
-<%= image_tag @user.avatar.url(:medium) %>
-<%= image_tag @user.avatar.url(:thumb) %>
+<h3>User: <%= @user.name if @user.name %></h3>
+<p>Account number: <%= @user.account_number if @user.email %></p>
+<p>Email: <%= @user.email if @user.email %></p>
+<p>Created: <%= @user.created_at if @user.created_at %></p>
+<%= link_to 'Back', :back %>
