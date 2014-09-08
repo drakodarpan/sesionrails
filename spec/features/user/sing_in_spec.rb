@@ -5,7 +5,8 @@ feature 'Sing in', :devise do
 =end
   
   scenario 'user cannot sign in if not registered' do
-    signin('test@example.com', 'plase123')
+    # signin('test@example.com', 'plase123')
+    signin('91437751', 'plase123')
     expect(page).to have_content I18n.t 'devise.failure.not_found_in_database'
   end
   
@@ -16,7 +17,7 @@ feature 'Sing in', :devise do
   #   Then I see a success message
   scenario 'user can sign in with valid credentials' do
     user = FactoryGirl.create(:user)
-    signin(user.email, user.password)
+    signin(user.account_number, user.password)
     expect(page).to have_content 'Signed in successfully.'
   end
   
@@ -25,10 +26,12 @@ feature 'Sing in', :devise do
   #   And I am not signed in
   #   When I sign in with a wrong email
   #   Then I see an invalid email message
-  scenario 'user cannot sign in with wrong email' do
+  scenario 'user cannot sign in with wrong ACCOUNT NUMBER' do
     user = FactoryGirl.create(:user)
-    signin('invalid@email.com', user.password)
-    expect(page).to have_content I18n.t 'devise.failure.not_found_in_database'
+    # signin('invalid@email.com', user.password)
+    signin('91437751', user.password)
+    # expect(page).to have_content I18n.t 'devise.failure.not_found_in_database'
+    expect(page).to have_content 'Error with account number'
   end
   
   # Scenario: User cannot sign in with wrong password
@@ -36,9 +39,10 @@ feature 'Sing in', :devise do
   # And I am not signed in
   # When I sign in with a wrong password
   # Then I see an invalid password message
-  scenario 'user cannot sign in with wrong email' do
+  scenario 'user cannot sign in with wrong ACCOUNT NUMBER' do
     user = FactoryGirl.create(:user)
-    signin(user.email, 'invalidpass')
+    # signin(user.email, 'invalidpass')
+    signin(user.account_number, 'invalidpass')
     expect(page).to have_content I18n.t 'devise.failure.invalid'
   end
 
